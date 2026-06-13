@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundação Cauã Victor - Cursos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            Fundação Cauã Victor
+            <small>Plataforma de Cursos Online</small>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link active" href="cursos.html">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="matriculas.html">Matrículas</a></li>
+                <li class="nav-item"><a class="nav-link" href="pagamentos.html">Planos</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="banner">
+        <h1>Cursos da plataforma</h1>
+        <p>Cadastre cursos, organize seus módulos e adicione as aulas de cada um.</p>
+    </div>
+
+    <!-- CURSOS -->
+
+    <div class="secao" id="cursos">
+
+        <div class="secao-titulo">
+            <div class="icone cor-coral"><i class="bi bi-mortarboard-fill"></i></div>
+            <div>
+                <h2>Cadastro de Cursos</h2>
+                <p>Crie novos cursos e associe a uma categoria</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card card-formulario cor-coral h-100">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Título</label>
+                            <input type="text" class="form-control" id="tituloCurso" placeholder="Digite o título">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Descrição</label>
+                            <input type="text" class="form-control" id="descricaoCurso" placeholder="Digite a descrição">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Categoria</label>
+                            <select class="form-select" id="categoriaCurso">
+                                <option value="">Selecione uma categoria</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100" id="btnCadastrarCurso">
+                            <i class="bi bi-journal-plus"></i> Cadastrar curso
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-lista h-100">
+                    <div class="card-body">
+
+                        <h5><i class="bi bi-list-ul"></i> Cursos cadastrados</h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Descrição</th>
+                                        <th>Categoria</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaCursos">
+                                    <tr>
+                                        <td colspan="3" class="text-center text-secondary">Nenhum curso cadastrado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MÓDULOS -->
+
+    <div class="secao" id="modulos">
+
+        <div class="secao-titulo">
+            <div class="icone cor-azul"><i class="bi bi-collection-fill"></i></div>
+            <div>
+                <h2>Cadastro de Módulos</h2>
+                <p>Divida cada curso em módulos organizados por ordem</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card card-formulario cor-azul h-100">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Título do módulo</label>
+                            <input type="text" class="form-control" id="tituloModulo" placeholder="Digite o título">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Ordem</label>
+                            <input type="number" class="form-control" id="ordemModulo" placeholder="Digite a ordem">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Curso</label>
+                            <select class="form-select" id="cursoModulo">
+                                <option value="">Selecione um curso</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100" id="btnCadastrarModulo">
+                            <i class="bi bi-folder-plus"></i> Cadastrar módulo
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-lista h-100">
+                    <div class="card-body">
+
+                        <h5><i class="bi bi-list-ul"></i> Módulos cadastrados</h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Ordem</th>
+                                        <th>Curso</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaModulos">
+                                    <tr>
+                                        <td colspan="3" class="text-center text-secondary">Nenhum módulo cadastrado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- AULAS -->
+
+    <div class="secao" id="aulas">
+
+        <div class="secao-titulo">
+            <div class="icone cor-teal"><i class="bi bi-play-circle-fill"></i></div>
+            <div>
+                <h2>Cadastro de Aulas</h2>
+                <p>Adicione as aulas de cada módulo, com tipo, duração e ordem</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card card-formulario cor-teal h-100">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Título</label>
+                            <input type="text" class="form-control" id="tituloAula" placeholder="Digite o título">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Tipo</label>
+                            <select class="form-select" id="tipoAula">
+                                <option value="">Selecione</option>
+                                <option value="Vídeo">Vídeo</option>
+                                <option value="Texto">Texto</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Duração</label>
+                            <input type="text" class="form-control" id="duracaoAula" placeholder="Ex: 12 min">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Ordem</label>
+                            <input type="number" class="form-control" id="ordemAula" placeholder="Digite a ordem">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Módulo</label>
+                            <select class="form-select" id="moduloAula">
+                                <option value="">Selecione um módulo</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100" id="btnCadastrarAula">
+                            <i class="bi bi-play-btn-fill"></i> Cadastrar aula
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-lista h-100">
+                    <div class="card-body">
+
+                        <h5><i class="bi bi-list-ul"></i> Aulas cadastradas</h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Título</th>
+                                        <th>Tipo</th>
+                                        <th>Duração</th>
+                                        <th>Ordem</th>
+                                        <th>Módulo</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaAulas">
+                                    <tr>
+                                        <td colspan="5" class="text-center text-secondary">Nenhuma aula cadastrada.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

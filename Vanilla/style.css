@@ -1,0 +1,296 @@
+/* ==========================================================
+   FUNDAÇÃO CAUÃ VICTOR - ESTILOS GERAIS
+   ========================================================== */
+
+:root {
+  --cor-fundo: #F8F7FA;
+  --cor-card: #FFFFFF;
+  --cor-texto: #2D2930;
+  --cor-acao: #6E56CF;
+  --cor-acao-hover: #5A45B0;
+  --cor-acao-claro: #EFEAFB;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Quicksand", sans-serif;
+}
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+
+.navbar {
+  background-color: var(--cor-acao) !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 4px 16px rgba(110, 86, 207, 0.25);
+}
+
+.navbar-brand {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 2.1rem !important;
+  letter-spacing: 0.5px;
+  color: #FFFFFF !important;
+}
+
+.navbar-brand small {
+  display: block;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-link {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 10px;
+  padding: 0.5rem 1rem !important;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF !important;
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================
+   TÍTULOS DE SEÇÃO
+   ========================================================== */
+
+.secao {
+  margin-bottom: 4rem;
+}
+
+.secao-titulo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.75rem;
+}
+
+.secao-titulo .icone {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  background-color: var(--cor-acao-claro);
+  color: var(--cor-acao);
+}
+
+.secao-titulo h2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--cor-texto);
+}
+
+.secao-titulo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #8B8694;
+}
+
+/* Variações de cor por categoria de seção */
+.icone.cor-roxo    { background-color: #EFEAFB; color: #6E56CF; }
+.icone.cor-coral   { background-color: #FAECE7; color: #D85A30; }
+.icone.cor-teal    { background-color: #E1F5EE; color: #0F6E56; }
+.icone.cor-azul    { background-color: #E6F1FB; color: #185FA5; }
+.icone.cor-rosa    { background-color: #FBEAF0; color: #993556; }
+.icone.cor-ambar   { background-color: #FAEEDA; color: #854F0B; }
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+.card {
+  background-color: var(--cor-card);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(45, 41, 48, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card.card-formulario {
+  border-top: 6px solid var(--cor-acao);
+}
+
+.card.card-formulario.cor-coral { border-top-color: #D85A30; }
+.card.card-formulario.cor-teal  { border-top-color: #0F6E56; }
+.card.card-formulario.cor-azul  { border-top-color: #185FA5; }
+.card.card-formulario.cor-rosa  { border-top-color: #993556; }
+.card.card-formulario.cor-ambar { border-top-color: #854F0B; }
+
+.card.card-lista {
+  border-radius: 20px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(45, 41, 48, 0.1);
+}
+
+.card-body h5 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-body h5 i {
+  color: var(--cor-acao);
+}
+
+/* ==========================================================
+   FORMULÁRIOS
+   ========================================================== */
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--cor-texto);
+}
+
+.form-control,
+.form-select {
+  border-radius: 12px;
+  border: 1.5px solid #E6E2EE;
+  padding: 0.55rem 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--cor-acao);
+  box-shadow: 0 0 0 0.2rem var(--cor-acao-claro);
+}
+
+.form-check-input:checked {
+  background-color: var(--cor-acao);
+  border-color: var(--cor-acao);
+}
+
+/* ==========================================================
+   BOTÕES (BOTÕES DE AÇÃO)
+   ========================================================== */
+
+.btn-primary,
+.btn-success,
+.btn-warning,
+.btn-info,
+.btn-dark,
+.btn-secondary {
+  background-color: var(--cor-acao);
+  border-color: var(--cor-acao);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 0.6rem 1.4rem;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-warning:hover,
+.btn-info:hover,
+.btn-dark:hover,
+.btn-secondary:hover {
+  background-color: var(--cor-acao-hover);
+  border-color: var(--cor-acao-hover);
+}
+
+.btn-primary:active,
+.btn-success:active,
+.btn-warning:active,
+.btn-info:active,
+.btn-dark:active,
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================
+   TABELAS
+   ========================================================== */
+
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: var(--cor-acao-claro);
+  color: var(--cor-acao);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background-color: var(--cor-acao-claro);
+}
+
+/* ==========================================================
+   PÁGINA INICIAL / BANNER
+   ========================================================== */
+
+.banner {
+  background: linear-gradient(135deg, var(--cor-acao) 0%, #8E78E0 100%);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  color: #FFFFFF;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.banner h1 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+/* ==========================================================
+   RESPONSIVO
+   ========================================================== */
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.5rem !important;
+  }
+
+  .secao-titulo .icone {
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+  }
+
+  .banner h1 {
+    font-size: 1.9rem;
+  }
+}

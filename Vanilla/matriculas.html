@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundação Cauã Victor - Matrículas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            Fundação Cauã Victor
+            <small>Plataforma de Cursos Online</small>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="matriculas.html">Matrículas</a></li>
+                <li class="nav-item"><a class="nav-link" href="pagamentos.html">Planos</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="banner">
+        <h1>Matrículas e progresso</h1>
+        <p>Matricule alunos nos cursos, acompanhe o progresso das aulas e gere certificados.</p>
+    </div>
+
+    <!-- MATRÍCULAS -->
+
+    <div class="secao" id="matriculas">
+
+        <div class="secao-titulo">
+            <div class="icone cor-rosa"><i class="bi bi-clipboard-check-fill"></i></div>
+            <div>
+                <h2>Matrícula de Usuários</h2>
+                <p>Matricule um usuário em um curso disponível</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card card-formulario cor-rosa h-100">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Usuário</label>
+                            <select class="form-select" id="usuarioMatricula">
+                                <option value="">Selecione um usuário</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Curso</label>
+                            <select class="form-select" id="cursoMatricula">
+                                <option value="">Selecione um curso</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100" id="btnMatricular">
+                            <i class="bi bi-check2-circle"></i> Matricular
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-lista h-100">
+                    <div class="card-body">
+
+                        <h5><i class="bi bi-list-ul"></i> Matrículas realizadas</h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Usuário</th>
+                                        <th>Curso</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaMatriculas">
+                                    <tr>
+                                        <td colspan="2" class="text-center text-secondary">Nenhuma matrícula cadastrada.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTROLE DE PROGRESSO -->
+
+    <div class="secao" id="progresso">
+
+        <div class="secao-titulo">
+            <div class="icone cor-ambar"><i class="bi bi-graph-up-arrow"></i></div>
+            <div>
+                <h2>Controle de Progresso</h2>
+                <p>Registre o progresso do aluno em cada aula</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card card-formulario cor-ambar h-100">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Usuário</label>
+                            <select class="form-select" id="usuarioProgresso">
+                                <option value="">Selecione um usuário</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Aula</label>
+                            <select class="form-select" id="aulaProgresso">
+                                <option value="">Selecione uma aula</option>
+                            </select>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="concluida">
+                            <label class="form-check-label" for="concluida">
+                                Aula concluída
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary w-100" id="btnRegistrarProgresso">
+                            <i class="bi bi-clipboard2-pulse"></i> Registrar progresso
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-lista h-100">
+                    <div class="card-body">
+
+                        <h5><i class="bi bi-list-ul"></i> Progresso dos usuários</h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Usuário</th>
+                                        <th>Aula</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaProgresso">
+                                    <tr>
+                                        <td colspan="3" class="text-center text-secondary">Nenhum progresso registrado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CERTIFICADOS -->
+
+    <div class="secao" id="certificados">
+
+        <div class="secao-titulo">
+            <div class="icone cor-roxo"><i class="bi bi-award-fill"></i></div>
+            <div>
+                <h2>Geração de Certificado</h2>
+                <p>Gere o certificado de conclusão para um usuário</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card card-formulario cor-roxo h-100">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Usuário</label>
+                            <select class="form-select" id="usuarioCertificado">
+                                <option value="">Selecione um usuário</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Curso</label>
+                            <select class="form-select" id="cursoCertificado">
+                                <option value="">Selecione um curso</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100" id="btnGerarCertificado">
+                            <i class="bi bi-patch-check-fill"></i> Gerar certificado
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-lista h-100">
+                    <div class="card-body">
+
+                        <h5><i class="bi bi-list-ul"></i> Certificados gerados</h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Usuário</th>
+                                        <th>Curso</th>
+                                        <th>Código</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaCertificados">
+                                    <tr>
+                                        <td colspan="3" class="text-center text-secondary">Nenhum certificado gerado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

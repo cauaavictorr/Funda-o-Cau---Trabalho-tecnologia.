@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundação Cauã Victor - Planos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            Fundação Cauã Victor
+            <small>Plataforma de Cursos Online</small>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="cursos.html">Cursos</a></li>
+                <li class="nav-item"><a class="nav-link" href="matriculas.html">Matrículas</a></li>
+                <li class="nav-item"><a class="nav-link active" href="pagamentos.html">Planos</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="banner">
+        <h1>Planos e pagamentos</h1>
+        <p>Simule a assinatura de um plano e o pagamento de um aluno.</p>
+    </div>
+
+    <!-- SIMULAÇÃO DE PAGAMENTO -->
+
+    <div class="secao" id="planos">
+
+        <div class="secao-titulo">
+            <div class="icone cor-coral"><i class="bi bi-credit-card-fill"></i></div>
+            <div>
+                <h2>Simulação de Pagamento</h2>
+                <p>Escolha um plano e um método de pagamento</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+                <div class="card card-formulario cor-coral h-100">
+                    <div class="card-body">
+
+                        <div class="mb-3">
+                            <label class="form-label">Plano</label>
+                            <select class="form-select" id="planoPagamento">
+                                <option value="">Selecione um plano</option>
+                                <option value="Básico">Básico</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Profissional">Profissional</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Método de pagamento</label>
+                            <select class="form-select" id="metodoPagamento">
+                                <option value="">Selecione</option>
+                                <option value="Cartão de Crédito">Cartão de Crédito</option>
+                                <option value="PIX">PIX</option>
+                                <option value="Boleto">Boleto</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100" id="btnPagamento">
+                            <i class="bi bi-cash-coin"></i> Realizar pagamento
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card card-lista h-100">
+                    <div class="card-body">
+
+                        <h5><i class="bi bi-list-ul"></i> Pagamentos realizados</h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Plano</th>
+                                        <th>Método</th>
+                                        <th>ID da transação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelaPagamentos">
+                                    <tr>
+                                        <td colspan="3" class="text-center text-secondary">Nenhum pagamento registrado.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
